@@ -1,0 +1,74 @@
+/**
+ * @file
+ * Styling Header banner block.
+*/
+
+.header-main-wrapper {
+  position: relative;
+  overflow: hidden;
+  .header-content {
+    text-align: center;
+    color: $white;
+    z-index: 9;
+    margin: 0 auto;
+    padding: 60px 0;
+    @include breakpoint(phablet) {
+      padding: 50px 0;
+    }
+  }
+  .page-title {
+    @include breakpoint(laptop) {
+      font-size: 2.5rem;
+      line-height: 1.5;
+    }
+    margin-bottom: 1.25rem;
+    font: {
+      family: $font--gerogia;
+      size: 4.25rem;
+      weight: 900;
+    };
+  }
+  .field--name-body {
+    font-size: 1.5rem;
+  }
+
+  background-size: cover;
+  &::before {
+    content: "";
+    background: linear-gradient(180deg, rgba(5, 17, 150, 0.9) 9.68%, rgba(65, 22, 158, 0.9) 67.31%, rgba(235, 13, 13, 0.9) 600%);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include container($container-width, 60px, 50px, 15px);
+  display: flex;
+  position: relative;
+  overflow: visible;
+
+  .field--name-field-banner-link {
+    padding: 1rem 0 0 0;
+    .field__item {
+      display: inline-block;
+      margin-right: 20px;
+      @include breakpoint(phablet) {
+        display: block;
+        margin-top: 20px;
+      }
+
+      a {
+        display: block;
+        padding: 12px 24px;
+        background: #ff0074;
+        border-radius: 22px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include breakpoint(phablet) {
+          width: fit-content;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

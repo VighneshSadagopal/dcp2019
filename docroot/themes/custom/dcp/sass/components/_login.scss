@@ -1,0 +1,169 @@
+/*------------------------------------*\
+    * @file
+    * Login.
+\*------------------------------------*/
+
+.path-user,
+.path-submit-session,
+.path-submit-workshop {
+  .content {
+    background-color: $medblue;
+  }
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+}
+.user-logged-in #edit-account {
+  margin-bottom: 2rem;
+  padding: 30px;
+  color: $text-color;
+  background-color: $white;
+  > .form-item:last-child {
+    margin-bottom: 0;
+  }
+}
+.user-logged-in .field--name-field-drupal-org-link {
+  padding: 1px 30px;
+  color: $text-color;
+  background-color: $white;
+}
+.user-logged-in .field--name-field-curr {
+  padding: 1px 30px;
+  color: $text-color;
+  background-color: $white;
+}
+.login-new-form {
+  max-width: 35rem;
+  padding: 30px;
+  color: $text-color;
+  background-color: $white;
+  h2 {
+    padding: 20px 0;
+    color: $black;
+    font-family: $title-font;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+.user-login-form,
+.user-register-form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid $medblue;
+  border-bottom: 1px solid $medblue;
+  .form-submit {
+    margin: auto !important; // Force overwrite Classy styling.
+    padding: 15px 30px 15px 30px;
+  }
+}
+select#edit-field-curr {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 1em;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  color: $white;
+  color: $text-color;
+  border: none;
+  border-bottom: solid 1px $white;
+  border-radius: 2px;
+  background-color: $medblue;
+  font-size: 1em;
+}
+.new-account {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: $text-color;
+  a {
+    text-decoration: none;
+    color: $btn-color;
+  }
+}
+#volunteer-field a {
+  display: inline-block;
+  color: $btn-color;
+}
+#register-close {
+  padding: 20px;
+  color: $grey;
+  font-size: 32px;
+}
+#edit-field-drupal-org-profile-0-value--description {
+  &.description {
+    display: block;
+    margin-top: 10px;
+  }
+}
+.user-logged-in {
+  .login-new-form {
+    h2 {
+      @include breakpoint(phablet) {
+        margin: 0 35%;
+      }
+      @include breakpoint(mobileonly) {
+        margin: 0 20%;
+      }
+      width: 200px;
+      margin: 0 40%;
+      padding: 0;
+    }
+  }
+}
+.block-user-login-block {
+  .login-new-form {
+    @include breakpoint(mobileonly) {
+      min-width: 0;
+      margin-right: -30px;
+      margin-left: -30px;
+    }
+    min-width: 35rem;
+  }
+}
+
+
+.user-register-form, .user-pass {
+  .captcha.js-form-wrapper {
+    // Important is needed to override earlier important.
+    border: 0 !important;
+    margin: 30px auto 10px !important;
+    summary {
+      display: none;
+    }
+    .details-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .details-description {
+      display: none;
+    }
+    .g-recaptcha {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.user-pass {
+  .captcha.js-form-wrapper {
+    .details-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .g-recaptcha {
+      margin-left: 0;
+    }
+  }
+}

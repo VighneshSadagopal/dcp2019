@@ -1,0 +1,77 @@
+.block-views-blockannouncements-block-1 {
+  @include container($container-width, 60px, 50px, 15px);
+  padding-top: 30px;
+  @include breakpoint(laptop) {
+    text-align: center;
+  }
+
+  h2 {
+    @extend %Georgia;
+    font-size: 36px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    color: $label;
+    padding-bottom: 30px;
+    @include breakpoint(laptop) {
+      padding-bottom: 18px;
+    }
+  }
+}
+
+.view-announcements {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 56px;
+    @include breakpoint(phablet) {
+      display: block;
+      padding-bottom: 25px;
+    }
+
+    .views-row {
+      flex-basis: 45%;
+    }
+
+    .views-field-title {
+        @extend %CircularAir-Bold;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: 0.21px;
+        color: $label;
+        &::after {
+          margin-left: 10px;
+          content: url(/../themes/custom/dcp/images/Arrow-black.svg);
+        }
+        @include breakpoint(laptop) {
+          line-height: 1.5;
+        }
+    }
+
+    .views-field.views-field-body {
+      margin: 15px 0 50px 0;
+      @include breakpoint(laptop) {
+        margin: 25px 0 35px 0;
+      }
+      .field-content,
+      p {
+        @extend %CircularAir-Book;
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: 0.39px;
+        color: $label;
+      }
+    }
+
+  }
+
+  .more-link {
+    text-align: center;
+    a {
+      @include block-cta();
+      letter-spacing: 0.875px;
+    }
+  }
+}

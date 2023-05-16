@@ -1,0 +1,29 @@
+uuid: c93f9fe0-071d-4a59-acd5-03ee835884d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_drupal_org_profile
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_profile_photo
+    - field.field.user.user.field_role
+    - field.field.user.user.field_type_of_business
+  module:
+    - user
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content: {  }
+hidden:
+  field_drupal_org_profile: true
+  field_full_name: true
+  field_organization: true
+  field_profile_photo: true
+  field_role: true
+  field_type_of_business: true
+  member_for: true

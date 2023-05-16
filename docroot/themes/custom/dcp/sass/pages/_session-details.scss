@@ -1,0 +1,197 @@
+.session-title {
+  @extend %CircularAir-Bold;
+  font-size: 48px;
+  line-height: 68px;
+  letter-spacing: 0.315px;
+  color: $label;
+  margin: 50px 0 10px 0;
+}
+
+.session-submitted-by {
+  margin: 0 0 40px 0;
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.315px;
+}
+
+.session-left {
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.396667px;
+  color: $session-title;
+  font-weight: 100;
+  padding: 10px 0;
+  p, ol, li {
+    @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  }
+
+  .field__label {
+    @extend %CircularAir-Book;
+      &.bold {
+          @extend %CircularAir-Bold;
+      }
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.315px;
+    font-weight: bold;
+    color: $session-title;
+  }
+  .field__item {
+    padding: 10px 0;
+  }
+}
+
+.session-detail-page {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  .session-attachment-label {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.315px;
+    font-weight: bold;
+    color: #313131;
+    padding-bottom: 20px;
+  }
+  .field--name-field-attachment {
+    background-color: #fff;
+    border-radius: 2px;
+    transition: box-shadow 83ms;
+    width: 232px;
+    padding: 12px 24px 12px 52px;
+    position: relative;
+    margin: 0 16px 16px 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    background-clip: padding-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    a{
+      color: $session-title;
+      text-decoration: none;
+    }
+  }
+}
+
+.session-detail {
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 22px;
+  line-height: 29px;
+  letter-spacing: 0.315px;
+  font-weight: bold;
+  color: $session-title;
+}
+.session-right {
+  font-size: 18px;
+  text-align: center;
+  background: url(../images/Vector.svg) no-repeat;
+  background-size: 150%;
+  padding: 45px 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  width: 210px;
+  word-break: break-all;
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+    ul,ol {
+      list-style-type: none;
+    }
+    ol, ul, li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+  }
+  @include breakpoint(phablet) {
+    padding: 60px 20px;
+  }
+}
+
+.session-parent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-column-gap: 1rem;
+}
+
+.speakers {
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.396667px;
+  color: $speaker;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.title-style {
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.315px;
+  font-weight: bold;
+  color: $session-title;
+}
+
+.track,
+.track a {
+  @extend %CircularAir-Book;
+    &.bold {
+        @extend %CircularAir-Bold;
+    }
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.396667px;
+  color: $session-title;
+  text-decoration: none;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.session-detail-page {
+  span.field--name-uid {
+      color: $speaker;
+      text-decoration: none;
+  }
+}
+
+@include breakpoint(phablet) {
+  .session-title {
+    font-size: 32px;
+    line-height: 47px;
+  }
+
+  .session-parent {
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+  }
+
+  .session-detail-page {
+    width: 95%;
+    margin: auto;
+  }
+}

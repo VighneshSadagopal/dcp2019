@@ -1,0 +1,11 @@
+.page-node-type-workshop {
+  .session-right {
+    background: none;
+    display: table;
+    border-radius: 10px;
+    border: 1px solid $speaker;
+  }
+}
+
+.page-node-type-workshop,
+.page-node-type-session {}

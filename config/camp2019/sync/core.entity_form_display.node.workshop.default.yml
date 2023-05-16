@@ -1,0 +1,81 @@
+uuid: bb8467a3-ef1d-41bd-bbff-13124521bf18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.workshop.body
+    - field.field.node.workshop.field_experience_level
+    - field.field.node.workshop.field_prerequisites
+    - field.field.node.workshop.field_presenter
+    - field.field.node.workshop.field_selected
+    - field.field.node.workshop.field_session_category
+    - field.field.node.workshop.field_speaker_consent
+    - node.type.workshop
+  module:
+    - text
+id: node.workshop.default
+targetEntityType: node
+bundle: workshop
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_experience_level:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_prerequisites:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_presenter:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_session_category:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_speaker_consent:
+    weight: 6
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_selected: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

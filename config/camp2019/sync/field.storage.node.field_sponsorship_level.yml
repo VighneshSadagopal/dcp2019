@@ -1,0 +1,33 @@
+uuid: cb2336bc-c11c-4f8e-b3d0-69f64664f316
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sponsorship_level
+field_name: field_sponsorship_level
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Platinum
+    -
+      value: '2'
+      label: Gold
+    -
+      value: '3'
+      label: Lanyard
+    -
+      value: '4'
+      label: Silver
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

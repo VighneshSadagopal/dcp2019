@@ -1,0 +1,31 @@
+uuid: c56a24b2-1e48-43b8-9ef5-7add4d9bd221
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_banner:380095ac-142c-415e-add5-05c852b3a835'
+  module:
+    - block_content
+    - system
+  theme:
+    - dcp
+id: volunteerwithusblockonhomepage
+theme: dcp
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:380095ac-142c-415e-add5-05c852b3a835'
+settings:
+  id: 'block_content:380095ac-142c-415e-add5-05c852b3a835'
+  label: 'Volunteer with Us block on homepage'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
